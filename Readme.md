@@ -233,7 +233,7 @@ bower install angular angular-animate angular-cookies angular-ui-routerangular-v
 
 5.   开始配置gulpfile.js文件
 
-在这里我就详细说明了，mydear，看我gulpfile.js 文件，里面的注释写的很详细的。
+在这里我就不详细说明了，亲爱的，看我gulpfile.js 文件，里面的注释写的很详细的。
 
 还有一点得说下，就是ES6转ES5的时候，需要配置一个文件，名为：
 
