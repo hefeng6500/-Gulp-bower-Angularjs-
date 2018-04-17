@@ -66,8 +66,6 @@ $ gulp
 
 下面我们就按照实例自己创建一个项目吧：
 
-![img](file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)![img](file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image004.png)
-
  
 
 Tips:运行 gulp 命令，启动的是名为 ‘default’ 的任务流；
