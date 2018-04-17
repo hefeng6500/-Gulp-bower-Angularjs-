@@ -218,7 +218,7 @@ npm 官网：<https://www.npmjs.com/>
 这么多插件，装起来需要些时间的，亲爱的，稍等下哦~~~
 
 ```
-npm install --save-dev gulp-htmlmin gulp-less gulp-minify-css gulp-sourcemaps gulp-jshintgulp-concat babel-core gulp-babel babel-preset-es2015 gulp-uglify gulp-imagemingulp-connect open gulp-plumber gulp-clean gulp-load-plugins
+npm install --save-dev gulp-htmlmin gulp-less gulp-minify-css gulp-sourcemaps gulp-jshint gulp-concat babel-core gulp-babel babel-preset-es2015 gulp-uglify gulp-imagemin gulp-connect open gulp-plumber gulp-clean gulp-load-plugins
 ```
 
  
