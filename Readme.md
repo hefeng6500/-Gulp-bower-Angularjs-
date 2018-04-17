@@ -76,7 +76,7 @@ https://github.com/hefeng6500/-Gulp-bower-Angularjs-/raw/master/Gulp_myFirst.zip
 
 
 
-### 2.2API文档
+### 2.2 API文档
 
 #### （1） gulp.src(globs[, options])
 
