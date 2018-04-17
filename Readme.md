@@ -83,10 +83,6 @@ https://github.com/hefeng6500/-Gulp-bower-Angularjs-/raw/master/Gulp_myFirst.zip
 输出（Emits）符合所提供的匹配模式（glob）或者匹配模式的数组（array of globs）的文件。 将返回一个 [Vinyl files](https://github.com/wearefractal/vinyl-fs) 的 [stream](http://nodejs.org/api/stream.html) 它可以被 [piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options) 到别的插件中。
 
 ```
- 
-```
-
-```
 gulp.src('client/js/**/*.js') // 匹配'client/js/somedir/somefile.js' 并且将 `base` 解析为 `client/js/`
 
  .pipe(minify())
@@ -230,7 +226,7 @@ npm install --save-dev gulp-htmlmin gulp-less gulp-minify-css gulp-sourcemaps gu
 安装bower 依赖插件
 
 ```
-bowerinstall angular angular-animate angular-cookies angular-ui-routerangular-validation jquery bootstrap echarts --save-dev
+bower install angular angular-animate angular-cookies angular-ui-routerangular-validation jquery bootstrap echarts --save-dev
 ```
 
 我2分钟就好了，嗯网速还不错；你呢？
