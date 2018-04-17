@@ -226,7 +226,7 @@ npm install --save-dev gulp-htmlmin gulp-less gulp-minify-css gulp-sourcemaps gu
 安装bower 依赖插件
 
 ```
-bower install angular angular-animate angular-cookies angular-ui-routerangular-validation jquery bootstrap echarts --save-dev
+bower install angular angular-animate angular-cookies angular-ui-router angular-validation jquery bootstrap echarts --save-dev
 ```
 
 我2分钟就好了，嗯网速还不错；你呢？
