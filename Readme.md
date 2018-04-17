@@ -245,7 +245,7 @@ cmd运行：
 type NUL> .babelrc
 ```
 
-然后 gulpfile.js 内容
+然后.babelrc 内容
 
 ```
 {
