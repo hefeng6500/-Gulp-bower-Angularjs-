@@ -1,5 +1,11 @@
 # 使用Gulp、bower、构建Angularjs项目详细教程，附构建成功源码
 
+
+
+# 		喜欢的话，给我一颗小心心噢~~~
+
+
+
 亲爱哒，接下来由我带你了解一下Gulp构建工具，要了解一个新知，当然是先去官网啦！那我们就去看下吧：
 
 Gulp官网地址：<https://www.gulpjs.com.cn/>
@@ -261,9 +267,9 @@ type NUL> .babelrc
 
 7.   在src写入你的文件后，cmd运行：gulp 或者 gulp serve 可启动项目；
 
-​	gulp：会清除之前dist目录下的文件
+  ​gulp：会清除之前dist目录下的文件
 
-​	gulp serve： 不会清除之前dist目录下的文件
+  ​gulp serve： 不会清除之前dist目录下的文件
 
 附件：
 
