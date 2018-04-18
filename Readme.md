@@ -14,7 +14,7 @@ Gulp官网地址：<https://www.gulpjs.com.cn/>
 
 ## 1、Gulp是什么？
 
-​	Gulp是基于Node.js的自动任务运行器，它能自动化地完成 JavaScript/coffee/sass /less/html/image/css 等文件的的测试、检查、合并、压缩、混淆、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤。在实现上，她借鉴了Unix操作系统的管道（pipe）思想，前一级的输出，直接变成后一级的输入，使得在操作上非常简单。
+​Gulp是基于Node.js的自动任务运行器，它能自动化地完成 JavaScript/coffee/sass /less/html/image/css 等文件的测试、检查、合并、压缩、混淆、格式化、浏览器自动刷新、部署文件生成，并监听文件改动。在实现上，它借鉴了Unix操作系统的管道（pipe）思想，前一级的输出，直接变成后一级的输入，使得在操作上非常简单。
 
 ## 2、 如何使用Gulp工具？
 
