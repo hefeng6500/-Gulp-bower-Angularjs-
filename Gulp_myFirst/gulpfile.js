@@ -43,7 +43,7 @@ gulp.task('less',function(){	//less解释为css，并压缩成一行
 });
 
 gulp.task('js', function() {	//压缩并且合并
-	gulp.src(app.srcPath + 'script/**/*.js')
+	gulp.src(app.srcPath + 'scripts/**/*.js')
 		.pipe($.plumber())
 		.pipe($.concat('index.js'))		//合并成一个名为index.js文件
 		.pipe($.babel()) 		//ES6转ES5
@@ -52,11 +52,11 @@ gulp.task('js', function() {	//压缩并且合并
 		.pipe($.connect.reload())
 });
 
-gulp.task('image', function() {	//压缩图片文件
-	gulp.src(app.srcPath + 'image/*.*')
+gulp.task('images', function() {	//压缩图片文件
+	gulp.src(app.srcPath + 'images/*.*')
 		.pipe($.plumber())
 //		.pipe($.imagemin())		//压缩，但是在gulp时发现报错：gulp-imagemin: Couldn't load default plugin "svgo"
-		.pipe(gulp.dest(app.distPath + 'image'))
+		.pipe(gulp.dest(app.distPath + 'images'))
 		.pipe($.connect.reload())
 });
 
@@ -67,7 +67,7 @@ gulp.task('lib',function(){		//将依赖文件打包
 		.pipe($.connect.reload())
 });
 
-gulp.task('font',function(){		//将模拟数据.json文件打包
+gulp.task('fonts',function(){		//将模拟数据.json文件打包
 	gulp.src([
 		app.srcPath +'**/*.woff2',
 		app.srcPath +'**/*.woff',
@@ -81,10 +81,10 @@ gulp.task('font',function(){		//将模拟数据.json文件打包
 		.pipe($.connect.reload())
 });
 
-gulp.task('data',function(){		//将模拟数据.json文件打包
-	gulp.src(app.srcPath + 'data/**/*.json')
+gulp.task('datas',function(){		//将模拟数据.json文件打包
+	gulp.src(app.srcPath + 'datas/**/*.json')
 		.pipe($.plumber())
-		.pipe(gulp.dest(app.distPath + 'data'))
+		.pipe(gulp.dest(app.distPath + 'datas'))
 		.pipe($.connect.reload())
 });
 
@@ -93,9 +93,18 @@ gulp.task('clean', function() {
 		.pipe($.clean());
 });
 
-gulp.task('build',['lib','html','less','js','image','data','font']);
+gulp.task('build',['lib','html','less','js','images','datas','fonts']);
 
 gulp.task('serve',['build'],function(){
+	
+	//gulp.watch 监听任务，目录下的之资源changed，执行任务流
+	gulp.watch('bower_components/**/*',['lib']);
+	gulp.watch(app.srcPath + '**/*.html',['html']);
+	gulp.watch(app.srcPath + 'styles/*.less',['less']);		//当所有src/less下的 .less文件发生改变时，调用less任务
+	gulp.watch(app.srcPath + 'scripts/**/*.js',['js']);
+	gulp.watch(app.srcPath + 'images/**/*',['image']);
+	gulp.watch(app.srcPath + 'datas/**/*.json',['data']);
+	
 	$.connect.server({			//前端启动服务，源自于gulp-connect
 	    root: [app.distPath],	//服务启动的根目录
 	    livereload: true,		//即时刷新
@@ -103,13 +112,7 @@ gulp.task('serve',['build'],function(){
 	});
 	open('http://127.0.0.1:8000');	//第二个参数可以指定: 'firefox','chrome',
 	
-	//gulp.watch 监听任务，目录下的之资源changed，执行任务流
-	gulp.watch('bower_components/**/*',['lib']);
-	gulp.watch(app.srcPath + '**/*.html',['html']);
-	gulp.watch(app.srcPath + 'styles/*.less',['less']);		//当所有src/less下的 .less文件发生改变时，调用less任务
-	gulp.watch(app.srcPath + 'script/**/*.js',['js']);
-	gulp.watch(app.srcPath + 'image/**/*',['image']);
-	gulp.watch(app.srcPath + 'data/**/*.json',['data']);
+	
 });
 
 gulp.task('default',['clean'],function(){	//default默认执行，也就是运行gulp命令自动执行default任务流；
